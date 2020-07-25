@@ -27,9 +27,19 @@ func main() {
 	for i := 0; i < n; i++ {
 		mp[a[i]]++
 	}
-	fmt.Println(len(mp))
+	// fmt.Println(len(mp))
 
-	for i := lo; i < high; i++ {
-		fmt.Printf("%d -> %d\n", i, mp[i])
+	// for i := lo; i < high; i++ {
+	// 	fmt.Printf("%d -> %d\n", i, mp[i])
+	// }
+
+	fmt.Println(Average(arr))
+
+	sum := 0.0
+	for _, i := range arr {
+		sum += float64(i)
 	}
+
+	fmt.Println(sum / float64(len(arr)))
+
 }
