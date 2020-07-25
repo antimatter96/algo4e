@@ -14,4 +14,22 @@ var arr = []int{
 func main() {
 	sort.Ints(arr)
 	fmt.Println(search.BinarySearch(arr, 191))
+
+	a := make([]int, 100)
+
+	lo := 20
+	high := 56
+	n := 99
+
+	RandomSeq(lo, high, n, a)
+	fmt.Println(a)
+	mp := make(map[int]int)
+	for i := 0; i < n; i++ {
+		mp[a[i]]++
+	}
+	fmt.Println(len(mp))
+
+	for i := lo; i < high; i++ {
+		fmt.Printf("%d -> %d\n", i, mp[i])
+	}
 }
